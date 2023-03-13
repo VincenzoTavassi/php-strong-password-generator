@@ -1,19 +1,9 @@
 <?php 
+include __DIR__ . "./functions.php";
+
 $lunghezza = $_GET['lunghezza'];
 
 $safe_password = create_password($lunghezza);
-
-function create_password($length) {
-    $password = [];
-
-    for ($i = 0; $i < $length; $i++) {
-        $carattere = chr(rand(33, 126));
-        $password[] = $carattere;
-    }
-    $password = implode('', $password);
-    return $password;
-}
-
 
 ?>
 
